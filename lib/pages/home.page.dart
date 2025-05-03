@@ -19,23 +19,41 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {},
-              icon: Icon(Icons.menu, color: Colors.white, size: 30)),
+              icon: const Icon(Icons.menu, color: Colors.white, size: 30)),
         ],
       ),
       body: Center(
-        child: Container(
-          padding: EdgeInsets.all(15),
-          child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 33, 37, 243),
-                  minimumSize: Size.fromHeight(50)),
-              onPressed: () {
-                _Deconnexion(context);
-              },
-              child: Text(
-                'Deconnexion',
-                style: TextStyle(color: Colors.white, fontSize: 25),
-              )),
+        child: Column(
+          children: [
+                        Container(
+              padding: const EdgeInsets.all(15),
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 232, 138, 71),
+                      minimumSize: const Size.fromHeight(50)),
+                  onPressed: () {
+                    Navigator.pushNamed(context,'/coffee');
+                  },
+                  child: const Text(
+                    'Commander un café',
+                    style: TextStyle(color: Colors.white, fontSize: 25),
+                  )),
+            ),
+            Container(
+              padding: const EdgeInsets.all(15),
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 33, 37, 243),
+                      minimumSize: const Size.fromHeight(50)),
+                  onPressed: () {
+                    _Deconnexion(context);
+                  },
+                  child: const Text(
+                    'Deconnexion',
+                    style: TextStyle(color: Colors.white, fontSize: 25),
+                  )),
+            ),
+          ],
         ),
       ),
     );

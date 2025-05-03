@@ -1,4 +1,4 @@
-allprojects {
+allprojects { // <-- ENSURE REPOSITORIES ARE HERE TOO
     repositories {
         google()
         mavenCentral()
@@ -16,3 +16,14 @@ subprojects {
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
+buildscript {
+    repositories { // <-- ADD THIS BLOCK
+        google()       // Google's Maven repository
+        mavenCentral() // Maven Central
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.0' // Updated AGP
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22' // Update Kotlin if needed
+    }
+}
+
