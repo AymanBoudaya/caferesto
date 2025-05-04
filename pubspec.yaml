@@ -26,16 +26,28 @@ environment:
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
 # dependencies can be manually updated by changing the version numbers below to
 # the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
+# versions available, run `flutter pub outdated`.*
+#------------------- PACKAGES -------------------#
 dependencies:
   flutter:
     sdk: flutter
   shared_preferences:
+  # Utility Packages
+  http:
+  intl:
+  logger:
+  url_launcher:
+  flutter_native_splash:
 
-
+  # Icons
+  iconsax:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
+
+  # State Management
+  get:
+  get_storage:
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +76,10 @@ flutter:
     - assets/img/coffee_bean.png
     - assets/img/coffee_image.jpg
     - assets/img/sugar_cube.png
+    - assets/logos/app_logo_dark.png
+    - assets/logos/app_logo_light.png
+    - assets/logos/google-icon.png
+    - assets/logos/facebook-icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
